@@ -18,7 +18,7 @@ public class EnemyPatrullaje : MonoBehaviour
     {
         if (isRandomPos)
         {
-            _index = Random.Range(0, positions.Length);
+            _index = Random.Range(Constans.ZERO, positions.Length);
         }
     }
     private void Update()
@@ -44,11 +44,9 @@ public class EnemyPatrullaje : MonoBehaviour
             if (IsLastPosition())
             {
                 _index++;
+                return;
             }
-            else
-            {
-                _index = Constans.ZERO;
-            }
+            _index = Constans.ZERO;
         }
     }
 

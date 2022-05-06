@@ -8,10 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Rigidbody2D rb2DPlayer;
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        if (instance == null) instance = this;
     }
 
     private void Update()

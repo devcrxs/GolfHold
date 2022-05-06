@@ -12,10 +12,7 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        if (instance == null) instance = this;
     }
 
     public void NextLevel(string nameScene)
@@ -60,4 +57,6 @@ public class UIManager : MonoBehaviour
     {
         textAttempts.text = GameManager.instance.availableAttempts.ToString();
     }
+    
+   
 }

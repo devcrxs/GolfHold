@@ -22,10 +22,7 @@ public class HoyoControl : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        if (instance == null) instance = this;
     }
 
     private void Start()
@@ -72,7 +69,6 @@ public class HoyoControl : MonoBehaviour
             _diamondCurrent++;
             ChangeColorArray(_defaultColor);
         }
-        
     }
 
     private bool IsCompletDiamond()
@@ -103,7 +99,6 @@ public class HoyoControl : MonoBehaviour
     private void LoadCanvasWin()
     {
         StartCoroutine(WaitShowCanvasWin());
-
     }
 
     private IEnumerator WaitShowCanvasWin()

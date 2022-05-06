@@ -1,9 +1,10 @@
 using UnityEngine;
-public class OptimizedMobile : MonoBehaviour
+public class SettingsMobile : MonoBehaviour
 {
+    private int frameRate = 60;
     private void Start()
     {
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = frameRate;
         Screen.SetResolution(Screen.width, Screen.height, true);
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }

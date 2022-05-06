@@ -13,10 +13,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        if (instance == null) instance = this;
     }
 
     private void Start()
@@ -53,6 +50,12 @@ public class MainMenuManager : MonoBehaviour
     private void DefaultPositionCanvas()
     {
         canvasSelectLevel.DOLocalMoveX(positionHideCanvas, Constans.ZERO);
+    }
+    
+    public void GoUrl(string url)
+    {
+        AudioSourceManager.instance.PlayAudioButton();
+        Application.OpenURL(url);
     }
     
 }

@@ -31,11 +31,8 @@ public class CheckColl : MonoBehaviour
                 AudioSourceManager.instance.PlayAudioTouchGround();
                 particleSystemDust.Play();
             }
-            
+            return;
         }
-        else
-        {
-            effectsGround = true;
-        }
+        effectsGround = true;
     }
 }
